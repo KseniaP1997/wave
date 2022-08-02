@@ -403,7 +403,7 @@ img {
   top: 30px;
   width: 42px;
   height: 42px;
-  background-image: url("../img/Header/closed_modal.svg");
+  background-image: url("img/Header/closed_modal.svg");
   background-color: transparent;
   background-size: cover;
   background-position: center;
@@ -697,7 +697,7 @@ img {
 .menu__limit {
   height: 58px;
   width: 46px;
-  background-image: url(../img/Frame\ 79.png);
+  background-image: url(img/Frame\ 79.png);
 }
 .menu-mob__box {
   display: none;
@@ -852,7 +852,7 @@ img {
 .radio__microphone {
   height: 372px;
   width: 350px;
-  background-image: url(../img/microphone.svg);
+  background-image: url(img/microphone.svg);
   background-position: center;
   background-size: cover;
   background-size:contain;
@@ -950,22 +950,22 @@ img {
   align-items: center;
   width: 48px;
   height: 48px;
-  background-image: url(/img/Podcast/play_default.svg);
+  background-image: url(img/Podcast/play_default.svg);
   background-color: transparent;
   cursor: pointer;
   transition: background .5s ease-in-out;
 }
 @media screen and (any-hover: hover) {
   .podcast__play:hover {
-    background-image: url("/img/Podcast/play_hover.svg");
+    background-image: url("img/Podcast/play_hover.svg");
   }
 }
 .podcast__play:focus-visible {
   outline: none;
-  background-image: url("/img/Podcast/play_focus.svg");
+  background-image: url("img/Podcast/play_focus.svg");
 }
 .podcast__play:active {
-  background-image: url("/img/Podcast/play_active.svg");
+  background-image: url("img/Podcast/play_active.svg");
 }
 .podcast__option {
   display: flex;
@@ -1093,7 +1093,7 @@ img {
   margin-bottom: 24px;
   width: 65px;
   height: 89px;
-  background-image: url(../img/Broadcast/microfon_65x89.svg);
+  background-image: url(img/Broadcast/microfon_65x89.svg);
 }
 .broadcast__btn {
   margin-bottom: 11px;
@@ -1842,7 +1842,7 @@ html .ui-button.ui-state-disabled:active {
 .genre__img {
   width: 30px;
   height: 30px;
-  background-image: url(../img/18.svg);
+  background-image: url(img/18.svg);
   background-repeat: no-repeat;
 }
 .inform-dop__paragraph {
@@ -1861,7 +1861,7 @@ html .ui-button.ui-state-disabled:active {
 .inform-dop__img {
   width: 30px;
   height: 30px;
-  background-image: url(../img/18.svg);
+  background-image: url(img/18.svg);
   background-repeat: no-repeat;
 }
 .track__flag {
@@ -1879,13 +1879,13 @@ html .ui-button.ui-state-disabled:active {
   align-content: center;
   height: 12px;
   width: 16px;
-  background-image: url(../img/Playlist/russion_flag.svg);
+  background-image: url(img/Playlist/russion_flag.svg);
   background-repeat: no-repeat;
 }
 .track__flag-uk {
   height: 12px;
   width: 16px;
-  background-image: url(../img/Playlist/uk_flag.svg);
+  background-image: url(img/Playlist/uk_flag.svg);
   background-repeat: no-repeat;
 }
 .genre__radio {
@@ -2102,7 +2102,7 @@ html .ui-button.ui-state-disabled:active {
   margin-right: 30px;
   width: 636px;
   height: 570px;
-  background-image: url(../img/Subscription/new_radio_2000.png);
+  background-image: url(img/Subscription/new_radio_2000.png);
   background-position: center;
   background-size: cover;
   background-size:contain;
@@ -2194,7 +2194,7 @@ html .ui-button.ui-state-disabled:active {
   margin-bottom: 19px;
   width: 100%;
   height: 12px;
-  background-image: url(../img/Subscription/subscription__wave_Vector.svg);
+  background-image: url(img/Subscription/subscription__wave_Vector.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2205,7 +2205,7 @@ html .ui-button.ui-state-disabled:active {
   display: inline-block;
   width: 42px;
   height: 42px;
-  background-image: url("../img/Header/closed_modal.svg");
+  background-image: url("img/Header/closed_modal.svg");
   background-color: transparent;
   background-size: cover;
   background-position: center;
@@ -2301,7 +2301,7 @@ html .ui-button.ui-state-disabled:active {
 .radio-left {
   width: 318px;
   height: 234px;
-  background-image: url(../img/Subscription/radio_left.png);
+  background-image: url(img/Subscription/radio_left.png);
   background-size: cover;
   background-repeat: no-repeat;
   transform: translateX(-68px);
@@ -2309,7 +2309,7 @@ html .ui-button.ui-state-disabled:active {
 .radio-center {
   width: 318px;
   height: 234px;
-  background-image: url(../img/Subscription/radio_center.png);
+  background-image: url(img/Subscription/radio_center.png);
   background-size: cover;
   background-repeat: no-repeat;
   transform: translateX(-31px);
@@ -2317,14 +2317,14 @@ html .ui-button.ui-state-disabled:active {
 .radio-right {
   width: 266px;
   height: 234px;
-  background-image: url(../img/Subscription/radio_right.png);
+  background-image: url(img/Subscription/radio_right.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .buy__wave {
   width: 704px;
   height: 10px;
-  background-image: url(../img/Subscription/Vector\ \(1\).svg);
+  background-image: url(img/Subscription/Vector\ \(1\).svg);
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 30px; 
@@ -2394,7 +2394,7 @@ html .ui-button.ui-state-disabled:active {
   margin-right: 30px;
   width:160px;
   height: 290px;
-  background-image: url(../img/About_as/Spiral\ 3.svg);
+  background-image: url(img/About_as/Spiral\ 3.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2402,7 +2402,7 @@ html .ui-button.ui-state-disabled:active {
 .dawn {
   width:255px;
   height: 255px;
-  background-image: url(../img/About_as/Dawn.svg);
+  background-image: url(img/About_as/Dawn.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2614,7 +2614,7 @@ fieldset {
   left: 0;
   opacity: 0;
   transition: opacity .5s ease-in-out;
-  background-image: url(/img/About_as/galka.svg);
+  background-image: url(img/About_as/galka.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -2640,7 +2640,7 @@ fieldset {
   margin-bottom: 20px;
   width: 160px;
   height: 20px;
-  background-image: url(../img/logo2.png);
+  background-image: url(img/logo2.png);
 }
 .link-social:not(:nth-child(4)) {
   margin-right: 26px;
@@ -2718,7 +2718,7 @@ fieldset {
   margin-bottom: 10px;
   width: 100%;
   height: 11px;
-  background-image: url(../img/Footer/Vector_footer.svg);
+  background-image: url(img/Footer/Vector_footer.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
