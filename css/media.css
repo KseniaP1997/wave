@@ -363,7 +363,7 @@
     margin-bottom: 54px;
     width: 24px;
     height: 24px;
-    background-image: url("../img/Header/close.svg");
+    background-image: url("img/Header/close.svg");
     background-color: transparent;
     background-size: cover;
     background-position: center;
@@ -404,7 +404,7 @@
   .laptop__spiral {
     width: 112px;
     height: 264px;
-    background-image: url(../img/Header/Vector.svg);
+    background-image: url(img/Header/Vector.svg);
   }
   .laptop__spiral:not(:last-child) {
     position: relative;
@@ -452,7 +452,7 @@
     margin-right: 20px;
     width: 77px;
     height: 105px;
-    background-image: url(../img/Broadcast/mic_77x105.svg);
+    background-image: url(img/Broadcast/mic_77x105.svg);
   }
   .broadcast__none-archive {
     max-width: 255px;
@@ -674,7 +674,7 @@
   .broadcast__microphone {
     width: 70px;
     height: 96px;
-    background-image: url(../img/Broadcast/mic_70x96.svg);
+    background-image: url(img/Broadcast/mic_70x96.svg);
   }
   .broadcast__a::after {
     height: 147px;
@@ -766,7 +766,7 @@
     margin-bottom: 60px;
   }
   .sensor {
-    background-image: url(/img/Subscription/Frame\ 258.png);
+    background-image: url(img/Subscription/Frame\ 258.png);
     height: 474px;
     width: 540px;
   }
@@ -784,7 +784,7 @@
     margin-bottom: 30px;
     width:1340px;
     height: 112px;
-    background-image: url(../img/About_as/Component\ 17.svg);
+    background-image: url(img/About_as/Component\ 17.svg);
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -1329,7 +1329,7 @@
   .podcast__play {
     width: 36px;
     height: 36px;
-    background-image: url(/img/Podcast/play_320.svg);
+    background-image: url(img/Podcast/play_320.svg);
   }
   .podcast__svg {
     margin-right: 3px;
@@ -1419,7 +1419,7 @@
     margin-right: 13px;
     width: 77px;
     height: 105px;
-    background-image: url(../img/Broadcast/mic_77x105.svg);
+    background-image: url(img/Broadcast/mic_77x105.svg);
   }
   .broadcast__btn {
     margin-bottom: 0;
@@ -1643,7 +1643,7 @@
     width: 100%;
   }
   .sensor {
-    background-image: url(/img/Subscription/radio_320.png);
+    background-image: url(img/Subscription/radio_320.png);
     margin-bottom: 24px;
     height: 231px;
     width: 100%;
