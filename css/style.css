@@ -2395,7 +2395,7 @@ html .ui-button.ui-state-disabled:active {
   margin-right: 30px;
   width:160px;
   height: 290px;
-  background-image: url(img/About_as/Spiral\ 3.svg);
+  background-image: url(../img/About_as/Spiral\ 3.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2403,7 +2403,7 @@ html .ui-button.ui-state-disabled:active {
 .dawn {
   width:255px;
   height: 255px;
-  background-image: url(img/About_as/Dawn.svg);
+  background-image: url(../img/About_as/Dawn.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2615,7 +2615,7 @@ fieldset {
   left: 0;
   opacity: 0;
   transition: opacity .5s ease-in-out;
-  background-image: url(img/About_as/galka.svg);
+  background-image: url(../img/About_as/galka.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -2641,7 +2641,7 @@ fieldset {
   margin-bottom: 20px;
   width: 160px;
   height: 20px;
-  background-image: url(img/logo2.png);
+  background-image: url(../img/logo2.png);
 }
 .link-social:not(:nth-child(4)) {
   margin-right: 26px;
