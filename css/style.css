@@ -1024,6 +1024,7 @@ img {
   font-size: 20px;
   line-height: 20px;
   background-color: transparent;
+  color: #6D31EE;
   transition: color .5s, background .5s;
 }
 .podcast__btn:hover {
@@ -1093,7 +1094,7 @@ img {
   margin-bottom: 24px;
   width: 65px;
   height: 89px;
-  background-image: url(img/Broadcast/microfon_65x89.svg);
+  background-image: url(../img/Broadcast/microfon_65x89.svg);
 }
 .broadcast__btn {
   margin-bottom: 11px;
@@ -2719,7 +2720,7 @@ fieldset {
   margin-bottom: 10px;
   width: 100%;
   height: 11px;
-  background-image: url(img/Footer/Vector_footer.svg);
+  background-image: url(../img/Footer/Vector_footer.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
