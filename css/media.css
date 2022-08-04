@@ -363,7 +363,7 @@
     margin-bottom: 54px;
     width: 24px;
     height: 24px;
-    background-image: url("img/Header/close.svg");
+    background-image: url("../img/Header/close.svg");
     background-color: transparent;
     background-size: cover;
     background-position: center;
@@ -404,7 +404,7 @@
   .laptop__spiral {
     width: 112px;
     height: 264px;
-    background-image: url(img/Header/Vector.svg);
+    background-image: url(../img/Header/Vector.svg);
   }
   .laptop__spiral:not(:last-child) {
     position: relative;
@@ -766,7 +766,7 @@
     margin-bottom: 60px;
   }
   .sensor {
-    background-image: url(img/Subscription/Frame\ 258.png);
+    background-image: url(../img/Subscription/Frame\ 258.png);
     height: 474px;
     width: 540px;
   }
@@ -1329,7 +1329,7 @@
   .podcast__play {
     width: 36px;
     height: 36px;
-    background-image: url(img/Podcast/play_320.svg);
+    background-image: url(../img/Podcast/play_320.svg);
   }
   .podcast__svg {
     margin-right: 3px;
@@ -1610,7 +1610,7 @@
     flex-flow: column nowrap;
     margin-bottom: 30px;
     margin-right: -32px;
-    width: cal(100% + 32px);
+    width: calc(100% + 32px);
   }
   .mobile-slider__btn {
     transition: all .5s ease-in-out;
@@ -1645,7 +1645,7 @@
     width: 100%;
   }
   .sensor {
-    background-image: url(img/Subscription/radio_320.png);
+    background-image: url(../img/Subscription/radio_320.png);
     margin-bottom: 24px;
     height: 231px;
     width: 100%;
