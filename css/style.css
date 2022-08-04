@@ -403,7 +403,7 @@ img {
   top: 30px;
   width: 42px;
   height: 42px;
-  background-image: url("img/Header/closed_modal.svg");
+  background-image: url("..img/Header/closed_modal.svg");
   background-color: transparent;
   background-size: cover;
   background-position: center;
@@ -852,7 +852,7 @@ img {
 .radio__microphone {
   height: 372px;
   width: 350px;
-  background-image: url(img/microphone.svg);
+  background-image: url(img/Radio/microphone_1920.png);
   background-position: center;
   background-size: cover;
   background-size:contain;

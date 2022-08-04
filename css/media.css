@@ -1609,7 +1609,8 @@
     justify-content: space-between;
     flex-flow: column nowrap;
     margin-bottom: 30px;
-    width: 100%;
+    margin-right: -32px;
+    width: cal(100% + 32px);
   }
   .mobile-slider__btn {
     transition: all .5s ease-in-out;
@@ -1617,6 +1618,7 @@
   .mobile-slider__btn {
     padding: 8px 19px;
     border: 2px solid #6D31EE;
+    background-color: transparent;
     border-radius: 77px;
     color: #6D31EE;
   }
