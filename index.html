@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W-Wave Radio</title>
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/choices.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -79,7 +77,7 @@
                 <li class="menu__item"><a href="#" class="menu__link nav__link">Реклама</a></li>
               </ul>
             </nav>
-            <div class="flex menu__btns bottom-btns">
+            <div class="flex menu__btns ">
               <button class="btn-reset bottom-btns__btn-players bottom-btns__btn-players-archive" aria-label="Запустить архив">
                 <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -111,8 +109,8 @@
             </div>
             <div class="menu__broadcast">
               <p class="menu__what"></p>
-              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                <svg class="menu__plus" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class="btn btn-primary btn-menu" type="button" >
+                <svg class="menu__plus plus-rotate" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="7.5" cy="7.5" r="7.5" fill="#6D31EE"/>
                   <path d="M12 7.00014V8.00014H3V7.00014H12Z" fill="white"/>
                   <path d="M8 12.0001H7L7 3.00014L8 3.00014L8 12.0001Z" fill="white"/>
@@ -277,7 +275,7 @@
 
     <section class="podcast">
       <div class="podcast__container container">
-        <h2 class="podcast__header"><a name="podcast">Подкасты</a></h2>
+        <h2 class="podcast__header" id="podcast">Подкасты</h2>
         <ul class="podcast__list list-reset flex">
           <li class="podcast__list-item ">
             <div class="podcast__card">
@@ -784,7 +782,7 @@
       <div class="broadcast__container container flex">
         <div class="broadcast__filter">
           <div class="broadcast__combobox">
-            <h2 class="broadcast__header"><a name="broadcast">Передачи</a></h2>
+            <h2 class="broadcast__header" id="broadcast">Передачи</h2>
             <span class="broadcast__text">Автор:</span>
             <select name="select" id="selectCustom">
               <option value="">Дмитрий Гутенберг</option>
@@ -941,16 +939,996 @@
       </div>
     </section>
 
-    <section class="guest">
+    <section class="guests" id="guests">
+      <div class="container">
+          <h2 class="guests__title title-reset">Гости</h2>
+          <h3 class="guests__subtitle section-reset">У нас бывают:</h3>
+          <p class="guests__descr section-reset">Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые
+              учёные
+              и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!
+          </p>
+          <div class="flex guests__accordion">
+              <ul class="accordion list-reset accordion-list">
+                <li class="accordion-list__item">
+                  <h3 class="accordion-list__title list-reset" tabindex="0">
+                    Блогеры
+                  </h3>
+                  <ul class="flex list-reset tabs-nav">
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="denisov">
+                        Сергей Денисов
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
+                        Евгений Войновский
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
+                        Олег Свиридовский
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="telman">
+                        Денис Тельман
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
+                        Матвей Мечников
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
+                        Ольга Мартынова
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="cowpers">
+                        Владислав Кауперс
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="gorin">
+                        Юрий Горин
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="prusinov">
+                        Константин Прусинов
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
+                        Дмитрий Михалок
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
+                        Михаил Пожитников
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="one">
+                        Максим Сергеев
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
+                        Иван Калитников
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
+                        Пётр Пиотровский
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="poluyan">
+                        Георгий Полуян
+                      </button>
+                    </li>
+                  </ul>
+                  <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                  </svg>
+                </li>
+                <li class="accordion-list__item">
+                  <h3 class="accordion-list__title list-reset" tabindex="0">
+                    Арт-Критики
+                  </h3>
+                  <ul class="flex list-reset tabs-nav">
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="denisov">
+                        Сергей Денисов
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
+                        Евгений Войновский
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
+                        Олег Свиридовский
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="telman">
+                        Денис Тельман
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
+                        Матвей Мечников
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="martynova">
+                        Ольга Мартынова
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="cowpers">
+                        Владислав Кауперс
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="gorin">
+                        Юрий Горин
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="prusinov">
+                        Константин Прусинов
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
+                        Дмитрий Михалок
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
+                        Михаил Пожитников
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="sergeyev">
+                        Максим Сергеев
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
+                        Иван Калитников
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
+                        Пётр Пиотровский
+                      </button>
+                    </li>
+                    <li class="tabs-nav__item">
+                      <button class="btn-reset tabs-nav__btn" data-path="poluyan">
+                        Георгий Полуян
+                      </button>
+                    </li>
+                  </ul>
+                  <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                  </svg>
+                </li>
+                <li class="accordion-list__item">
+                  <h3 class="accordion-list__title list-reset" tabindex="0">
+                    Художники
+                  </h3>
+                  <ul class="flex list-reset tabs-nav">
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
+                          Сергей Денисов
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
+                          Евгений Войновский
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
+                          Олег Свиридовский
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="telman">
+                          Денис Тельман
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
+                          Матвей Мечников
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="martynova">
+                          Ольга Мартынова
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
+                          Владислав Кауперс
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
+                          Юрий Горин
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
+                          Константин Прусинов
+                        </button>
+                      </li>
+                    </ul>
+                  <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                  </svg>
+                </li>
+                <li class="accordion-list__item">
+                  <h3 class="accordion-list__title list-reset" tabindex="0">
+                    Люди науки
+                  </h3>
+                  <ul class="flex list-reset tabs-nav">
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
+                          Сергей Денисов
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
+                          Евгений Войновский
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
+                          Олег Свиридовский
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="one">
+                          Денис Тельман
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
+                          Матвей Мечников
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="martynova">
+                          Ольга Мартынова
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
+                          Владислав Кауперс
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
+                          Юрий Горин
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
+                          Константин Прусинов
+                        </button>
+                      </li>
+                    </ul>
+                  <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                  </svg>
+                </li>
+                <li class="accordion-list__item">
+                  <h3 class="accordion-list__title list-reset" tabindex="0">
+                    Историки
+                  </h3>
+                  <ul class="flex list-reset tabs-nav">
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
+                          Сергей Денисов
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
+                          Евгений Войновский
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
+                          Олег Свиридовский
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="telman">
+                          Денис Тельман
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
+                          Матвей Мечников
+                        </button>
+                      </li>
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="martynova">
+                          Ольга Мартынова
+                        </button>
+                      </li>
+                    </ul>
+                  <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                  </svg>
+                </li>
+                <li class="accordion-list__item accordion-list__item-mobile">
+                  <h3 class="accordion-list__title list-reset" tabindex="0">
+                    Филологи
+                  </h3>
+                  <ul class="flex list-reset tabs-nav">
+
+                    </ul>
+                  <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
+                    <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                  </svg>
+                </li>
+              </ul>
+              <div class="tabs-content">
+                
+                <div class="tabs-content__bloggers">
+                  <div data-target="martynova"
+                    class="tabs-item tabs-item--active">
+                    <picture class="tabs-item__img">
+                      <source media="(max-width: 767px)" srcset="img/Guests/Olga_Martynova_256х159_320.png">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/Olga_Martynova_540х220_768.png">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/Olga_Martynova_255х159_1024.png">
+                      <img src="img/Guests/Olga_Martynova_350х220_1920.png" alt="Фото гостя">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Ольга Мартынова
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Российский искусствовед, арт-критик, куратор выставок, дизайнер, кандидат культурологии.
+                      Арт&ndash;&nbsp;критик
+                      газеты &laquo;Коммерсантъ&raquo;. Ведёт активную блогерскую деятельность как куратор музея
+                      &laquo;Гараж&raquo;, коим является с&nbsp;2016&nbsp;года.
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="voynovsky"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Евгений Войновский
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="denisov"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Сергей Денисов
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="sviridovsky"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Олег Свиридовский
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="telman"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Денис Тельман
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="mechnikov"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Матвей Мечников
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="cowpers"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Владислав Кауперс
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="gorin"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Юрий Горин
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="prusinov"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Константин Прусинов
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="mikhalok"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Дмитрий Михалок
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="pozhitnikov"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Михаил Пожитников
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="sergeyev"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Максим Сергеев
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="kalitnikov"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Иван Калитников
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="piotrovsky"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Пётр Пиотровский
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                  <div data-target="poluyan"
+                    class="tabs-item">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/Guests/screen_320.jpg">
+                      <source media="(max-width: 1023px)" srcset="img/Guests/screen_768.jpg">
+                      <source media="(max-width: 1200px)" srcset="img/Guests/screen_1024.jpg">
+                      <img src="img/Guests/screen_1920.jpg" alt="Фото гостя отсутствует" class="tabs-item__zaglushka">
+                    </picture>
+                    <ul class="flex list-reset tabs-item__list">
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Instagram">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Facebook">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15.78 22V14.26H18.3722L18.76 11.2511H15.78V9.33111C15.78 8.46 16.0222 7.86556 17.2711 7.86556H18.8644V5.17444C18.0931 5.09261 17.3179 5.05292 16.5422 5.05556C14.2456 5.05556 12.6733 6.45778 12.6733 9.03333V11.2511H10.0756V14.26H12.6733V22H3.11111C2.81643 22 2.53381 21.8829 2.32544 21.6746C2.11706 21.4662 2 21.1836 2 20.8889V3.11111C2 2.81643 2.11706 2.53381 2.32544 2.32544C2.53381 2.11706 2.81643 2 3.11111 2H20.8889C21.1836 2 21.4662 2.11706 21.6746 2.32544C21.8829 2.53381 22 2.81643 22 3.11111V20.8889C22 21.1836 21.8829 21.4662 21.6746 21.6746C21.4662 21.8829 21.1836 22 20.8889 22H15.78Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                      <li class="tabs-item__item">
+                        <a href="#" class="tabs-item__link" aria-label="Перейти в Twitter">
+                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75097 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.3449 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.264 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.23009 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z" fill="#A1A6B4"/>
+                              </svg>                                    
+                        </a>
+                      </li>
+                    </ul>
+                    <h3 class="tabs-item__title section-reset">
+                      Георгий Полуян
+                    </h3>
+                    <p class="tabs-item__desc section-reset">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore similique, doloremque nobis aliquam soluta amet eius enim eveniet cum? Voluptas eligendi perspiciatis laboriosam, quas molestias similique odit repellat sint!
+                    </p>
+                    <button class="btn-reset tabs-item__btn">
+                      Эфиры с гостем
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+  </section>
+   <!--<section class="guest">
       <div class="guest__container container">
         <div class="guest__top-box">
-          <h2 class="guest__title"><a name="guest">Гости</a></h2>
+          <h2 class="guest__title" id="guest">Гости</h2>
           <p class="guest__subtitle">У нас бывают:</p>
           <p class="guest__text">Блогеры, арт-критики и деятели искусства, музыканты, молодые учёные и люди науки, историки, филологи и много других интересных гостей!</p>
         </div>
         <div class="guest__bottom-box">
         <div class="guest__content">
-          <div class="guest__accordion">
+        <div class="guest__accordion">
             <ul class="accordion guest__list list-reset">
               <li class="guest__item guest__item-none" >
                 <h3 class="guest__profession">Блогеры
@@ -978,7 +1956,7 @@
                         <button class="guest-box__step guest-box__step--active" data-path="MatveyM" aria-label="Матвей Мечников">Матвей Мечников</button>
                       </li>
                       <li class="guest-box__link">
-                        <button class="guest-box__step guest-box__step--active" data-path="OlgaM" aria-label="Ольга Мартынова">Ольга Мартынова</button>
+                        <button class="guest-box__step guest-box__step--active  active-olga" data-path="OlgaM" aria-label="Ольга Мартынова">Ольга Мартынова</button>
                       </li>
                       <li class="guest-box__link">
                         <button class="guest-box__step guest-box__step--active" data-path="VladislavK" aria-label="Владислав Кауперс">Владислав Кауперс</button>
@@ -1365,7 +2343,7 @@
             </ul>
           </div>
         </div>
-        <div class="guest__description guest__description--active description-content" data-target="one">
+        <div class="guest__description  description-content" data-target="one">
             <picture>
               <source media="(max-width: 320px)" srcset="img/Guests/screen_320.jpg" class="description-content__picture">
               <source media="(max-width: 768px)" srcset="img/Guests/screen_768.jpg" class="description-content__picture">
@@ -1413,7 +2391,7 @@
               <img src="img/Guests/screen_1920.jpg" alt="Тут будет фото гостя" class="description-content__picture" >
           </picture>
         </div>
-        <div class="guest__description description-content" data-target="OlgaM">
+        <div class="guest__description guest__description--active description-content" data-target="OlgaM">
           <picture>
             <source media="(max-width: 320px)" srcset="img/Guests/Olga_Martynova_256х159_320.png" class="description-content__picture">
             <source media="(max-width: 768px)" srcset="img/Guests/Olga_Martynova_540х220_768.png" class="description-content__picture">
@@ -1523,13 +2501,13 @@
         </div>
       </div>
       </div>
-    </section>
+    </section>-->
 
     <section class="playlist">
       <div class="playlist__container container flex">
         <div class="playlist__box">
           <div class="playlist__radio genre">
-            <h2 class="genre__title"><a name="playlist">Плейлисты</a></h2>
+            <h2 class="genre__title" id="playlist">Плейлисты</h2>
             <span class="genre__text">Жанр</span>
             <div class="genre__box">
               <div class="genre__column">
@@ -1607,260 +2585,531 @@
               <div class="genre__img"></div>
             </div>
           </div>
-          <ul class=" track list-reset flex">
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+          <div class="playlists__right">
+            <div class="playlists__slider-wrap">
+              <div class="playlists__slider-nav">
+                <button class="playlists__btn playlists__btn--prev btn-reset js-playlists-btn-prev">
+                  <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.646447 4.35355C0.451184 4.15829 0.451184 3.84171 0.646447 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646447 4.35355ZM21 4.5H1V3.5H21V4.5Z" fill="#121723" />
                   </svg>
-                  <picture>
-                    <source srcset="img/Playlist/Ploho_113x113.png" type="image/png" media="(max-width: 1024px)">
-                    <img src="img/Playlist/Ploho_160x160.png" class="playlist__img flex" alt="Обложка плейлиста">
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-russia"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">Ploho</h3>
-                  <span class="track__text">3 последних альбома</span>
-                </div>
-              </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                </button>
+                <div class="playlists__pagination js-playlists-pagination"></div>
+                <button class="playlists__btn playlists__btn--next btn-reset js-playlists-btn-next">
+                  <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723" />
                   </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/MolchatDoma_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/MolchatDoma_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture> 
-                  <div class="track__flag">
-                    <div class="track__flag-russia"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">Molchat Doma</h3>
-                  <span class="track__text">Все песни</span>
-                </div>
+                </button>
               </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/Motorama_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/Motorama_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-russia"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">Motorama</h3>
-                  <span class="track__text">Все синглы</span>
-                </div>
+              <div class="playlists__slider js-playlists-slider">
+                <ul class="swiper-wrapper reset-list">
+                  <li class="playlists__slide playlist-slide swiper-slide item track__item flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source srcset="img/Playlist/Ploho_113x113.png" type="image/png" media="(max-width: 1024px)">
+                          <img src="img/Playlist/Ploho_160x160.png" class="playlist__img flex" alt="Обложка плейлиста">
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-russia"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Ploho</h3>
+                        <span class="track__text">3 последних альбома</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide item track__item flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/MolchatDoma_113x113.png" >
+                          <img src="img/Playlist/MolchatDoma_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture> 
+                        <div class="track__flag">
+                          <div class="track__flag-russia"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Molchat Doma</h3>
+                        <span class="track__text">Все песни</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide item track__item flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Motorama_113x113.png" class="playlist__img">
+                          <img src="img/Playlist/Motorama_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-russia"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Motorama</h3>
+                        <span class="track__text">Все синглы</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide item track__item flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/HumanTetris_113x113.png" class="playlist__img">
+                          <img src="img/Playlist/HumanTetris_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-russia"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Human Tetris</h3>
+                        <span class="track__text">3 последних альбома</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide item track__item flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Buerak_113x113.png" class="playlist__img">
+                          <img src="img/Playlist/Buerak_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-russia"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Буерак</h3>
+                        <span class="track__text">Все ЕР</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide item track__item flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/July_days_113x113.png" class="playlist__img">
+                          <img src="img/Playlist/July_days_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-russia"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Июльские Дни</h3>
+                        <span class="track__text">Альбом колокол</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Joydevision_113x113.png" class="playlist__img">
+                          <img src="img/Playlist/Joydevision_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Joy Division</h3>
+                        <span class="track__text">Лучшее за все время</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/TheCure_113x113.png" class="playlist__img">
+                          <img src="img/Playlist/TheCure_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">The Cure</h3>
+                        <span class="track__text">Лучшее за все время</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/TheSmitch_113x113.png" >
+                          <img src="img/Playlist/TheSmitch_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">The Smitch</h3>
+                        <span class="track__text">Период 1984-1988</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/NewOrder_113x113.png" class="playlist__img">
+                          <img src="img/Playlist/NewOrder_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">New Order</h3>
+                        <span class="track__text">Хиты</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Bauhaus_113x113.png" class="playlist__img">
+                          <img src="img/Playlist/Bauhaus_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Bauhaus</h3>
+                        <span class="track__text">Все синглы</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Gangoffour_113x113.png" class="playlist__img">
+                          <img src="img/Playlist/Gangoffour_160x160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Gang Of Four</h3>
+                        <span class="track__text">3 последних альбома</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/The_Chameleons_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/The_Chameleons_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">The Chameleons</h3>
+                        <span class="track__text">Период  2000-2003</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Killing_Joke_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/Killing_Joke_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Killing Joke</h3>
+                        <span class="track__text">Период 1988-1991</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/The_Stranglers_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/The_Stranglers_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">The Stranglers</h3>
+                        <span class="track__text">Лучшее за всё время</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Ultravox_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/Ultravox_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-uk"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Ultravox</h3>
+                        <span class="track__text">Период  1973-1987</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Pere_Ubu_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/Pere_Ubu_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-usa"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Pere Ubu</h3>
+                        <span class="track__text">Dub Housing</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Talking_Heads_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/Talking_Heads_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-usa"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Talking Heads</h3>
+                        <span class="track__text">Лучшее за всё время</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/The_Feelies_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/The_Feelies_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-usa"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">The Feelies</h3>
+                        <span class="track__text">Crazy Rhythms</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Wipers_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/Wipers_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-usa"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Wipers</h3>
+                        <span class="track__text">Лучшее за всё время</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Violent_Femmes_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/Violent_Femmes_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-usa"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Violent Femmes</h3>
+                        <span class="track__text">Лучшее за всё время</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Minutemen_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/Minutemen_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-usa"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Minutemen</h3>
+                        <span class="track__text">Хиты</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/Swans_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/Swans_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-usa"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">Swans</h3>
+                        <span class="track__text">Все синглы</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="playlists__slide playlist-slide swiper-slide flex">
+                    <div class="track__card flex" tabindex="0">
+                      <div class="track__card-item">
+                        <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
+                          <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
+                        </svg>
+                        <picture>
+                          <source media="(max-width: 1024px)" srcset="img/Playlist/DEVO_113х113.png" class="playlist__img">
+                          <img src="img/Playlist/DEVO_160х160.png" alt="Обложка плейлиста" class="playlist__img flex" >
+                        </picture>
+                        <div class="track__flag">
+                          <div class="track__flag-usa"></div>
+                        </div>
+                      </div>
+                      <div class="track__description flex">
+                        <h3 class="track__title">DEVO</h3>
+                        <span class="track__text">3 последних альбома</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/HumanTetris_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/HumanTetris_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-russia"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">Human Tetris</h3>
-                  <span class="track__text">3 последних альбома</span>
-                </div>
-              </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/Buerak_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/Buerak_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-russia"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">Буерак</h3>
-                  <span class="track__text">Все ЕР</span>
-                </div>
-              </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/July_days_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/July_days_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-russia"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">Июльские Дни</h3>
-                  <span class="track__text">Альбом колокол</span>
-                </div>
-              </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/Joydevision_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/Joydevision_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-uk"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">Joy Division</h3>
-                  <span class="track__text">Лучшее за все время</span>
-                </div>
-              </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/TheCure_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/TheCure_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-uk"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">The Cure</h3>
-                  <span class="track__text">Лучшее за все время</span>
-                </div>
-              </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/TheSmitch_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/TheSmitch_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-uk"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">The Smiths</h3>
-                  <span class="track__text">Период 1984-1980</span>
-                </div>
-              </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/NewOrder_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/NewOrder_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-uk"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">New Order</h3>
-                  <span class="track__text">Хиты</span>
-                </div>
-              </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/Bauhaus_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/Bauhaus_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-uk"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">Bauhaus</h3>
-                  <span class="track__text">Все синглы</span>
-                </div>
-              </div>
-            </li>
-            <li class="item track__item flex">
-              <div class="track__card flex" tabindex="0">
-                <div class="track__card-item">
-                  <svg width="56" height="56" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="28" cy="28" r="24.5" fill="#6D31EE"/>
-                    <path d="M25.3078 37.096L36.8336 28.933C37.5 28.4665 37.5 27.5336 36.8336 27.0672L25.3078 18.9041C24.4934 18.321 23.3334 18.8808 23.3334 19.837V36.1631C23.3334 37.1194 24.4934 37.6791 25.3078 37.096Z" fill="white"/>
-                  </svg>
-                  <picture>
-                    <source media="(max-width: 1024px)" srcset="img/Playlist/Gangoffour_113x113.png" class="playlist__img">
-                    <img src="img/Playlist/Gangoffour_160x160.png" alt="Обложка плейлиста" class="playlist__img" >
-                  </picture>
-                  <div class="track__flag">
-                    <div class="track__flag-uk"></div>
-                  </div>
-                </div>
-                <div class="track__description flex">
-                  <h3 class="track__title">Gang Of Four</h3>
-                  <span class="track__text">3 последних альбома</span>
-                </div>
-              </div>
-            </li>   
-          </ul>
+            </div>
+          </div>
           <div class="inform-dop">
             <p class="inform-dop__paragraph">
               Раздел «Плейлисты» может содержать информацию, не предназначенную для несовершеннолетних. <br>© 2021 l W-Wave<br>
@@ -1876,7 +3125,12 @@
       <div class="subscription__container container">
         <div class="subscription__box">
           <div class="subscription__radio">
-            <div class="sensor"></div>
+            <picture>
+              <source media="(max-width: 550px)" srcset="img/Subscription/new_radio_256px.png" class="sensor">
+              <source media="(max-width: 768px)" srcset="img/Subscription/new_radio_540px.png" class="sensor">
+              <source media="(max-width: 1024px)" srcset="img/Subscription/new_radio_1024.png" class="sensor">
+              <img src="img/Subscription/new_radio_2000.png" alt="Обложка плейлиста" class="sensor" >
+            </picture>
           </div>
           <div class="subscription__inform">
             <div class="subscription__inform-box">
@@ -1951,19 +3205,10 @@
       <div class="about-us__container container">
         <div class="description">
           <div class="description__inform">
-            <h2 class="description__title"><a name="about_us">О нас</a></h2>
+            <h2 class="description__title" id="about_us">О нас</h2>
             <p class="description__subtitle">Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!</p>
             <p class="description__text">Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо! Услышимся! :)</p>
           </div>
-          <div class="col-none ">
-            <div class="description-right">
-              <div class="spiral"></div>
-              <div class="dawn"></div>
-            </div>
-            <div class="description-dawn">
-              <div class="dawn"></div>
-            </div>
-          </div> 
         </div>
         <div class="description-bottom"></div>
         <div class="group">

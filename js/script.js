@@ -1,32 +1,79 @@
 
 
-//guest accardion
-$(".accordion").accordion({
- heightStyle: "content",
- collapsible: true,
- active: false
+// accordion()
+
+function openCatalogEl() {
+  document.querySelectorAll('.accordion__value-item').forEach(el => {
+    const link = el.querySelector('.accordion__link');
+
+    if (window.matchMedia("(max-width: 868px)").matches) {
+      link.href = '#autorSpace'
+    }
+
+    el.addEventListener('click', () => {
+      const valueEl = el.textContent;
+
+      const listAutor = document.querySelectorAll('.autor');
+
+      for (let i of listAutor) {
+        const autorName = i.querySelector('.autor__name').textContent;
+
+        document.querySelector('.autor_active').classList.remove('autor_active');
+
+        if (valueEl === autorName.trim()) {
+          i.classList.add('autor_active');
+          break
+        }
+
+        document.querySelector('.autor_none').classList.add('autor_active');
+      }
+    })
+  })
+}
+
+openCatalogEl()
+
+document.querySelectorAll('.tabs-nav__btn').forEach(function(tabsBtn){
+  tabsBtn.addEventListener('click', function(e){
+    const path = e.currentTarget.dataset.path;
+    document.querySelectorAll('.tabs-nav__btn').forEach(function(btn){
+btn.classList.remove('tabs-nav__btn--active')});
+    e.currentTarget.classList.add('tabs-nav__btn--active');
+document.querySelectorAll('.tabs-item').forEach(function(tabsBtn){
+tabsBtn.classList.remove('tabs-item--active')});
+document.querySelector(`[data-target="${path}"]`).classList.add('tabs-item--active');
+ });
 });
 
-
-$(".guest__item").click (function(e) {
-  e.preventDefault();
-  $(".guest__item").removeClass("guest__close");
-  $(this).addClass("guest__close")
+$(".accordion-list").accordion({
+  heightStyle: "content",
+  active: 0,
+  collapsible: true,
+  icons: false
 });
+ 
+document.querySelector('.btn-menu').addEventListener('click', function () {
+  document.querySelector('.bottom-btns').classList.toggle('card__btns_active')
+  document.querySelector('.btn-menu').classList.toggle('btn-menu_active')
+  document.querySelector('.header__bottom').classList.toggle('header__bottom_active')
+});
+ 
 
 // tabs
 document.querySelectorAll('.guest-box__step' ).forEach(function(tabsBtn){
   tabsBtn.addEventListener('click', function(e){
     const path = e.currentTarget.dataset.path;
     document.querySelectorAll('.guest-box__step').forEach(function(btn){
-      btn.classList.remove('guest-box__step--active')});
-
+      btn.classList.remove('guest-box__step--active')
+    });
+      
   e.currentTarget.classList.add('guest-box__step--active');
   document.querySelectorAll('.guest__description').forEach(function(tabsBtn){
     tabsBtn.classList.remove('guest__description--active')});
     document.querySelector(`[data-target="${path}"]`).classList.add('guest__description--active');
   });
 });
+
 
 //Кастомный селект
 const element = document.querySelector('#selectCustom');
@@ -72,6 +119,7 @@ document.querySelector('.bottom-btns__btn-players-archive-mobile').addEventListe
 document.querySelector('.bottom-btns__btn-players-ether-mobile').addEventListener('click', function () {
   document.querySelector('.bottom-btns__btn-players-ether-mobile .passive').classList.toggle('btn-active')
 });
+
 
 //Валидация формы
 new JustValidate('.form', {
@@ -170,6 +218,100 @@ btn.addEventListener('click', () => {
 $('.control').on('click', function() {
     $(this).toggleClass('pause play');
 });
+$('.podcast__play').on('click', function() {
+  $(this).toggleClass('pause-play');
+});
+$('.btn-menu').on('click', function() {
+  $(this).toggleClass('card-body');
+});
 
+(() => {
+  //Слайдер радиокнопок на мобилке
+  let swiper = Swiper;
+  let init = false;
+  
+  function swiperMode() {
+    let mobile = window.matchMedia("(min-width: 0px) and (max-width: 576px)");
+    
+    const wrapper = document.querySelector('.js-form');
+    const slides = wrapper.querySelectorAll('.js-slide');
 
+    // Enable (for mobile)
+    if (mobile.matches) {
+      if (!init) {
+        wrapper.classList.add('swiper-wrapper');
+        slides.forEach(slide => {
+          slide.classList.add('swiper-slide');
+        });
+        
+        init = true;
+        swiper = new Swiper(".js-radio", {
+          slidesPerView: 'auto',
+          spaceBetween: 20,
+          watchSlidesProgress: true
+        });
+        
+      }
+    } else {
+      swiper.destroy();
+      init = false;
+      wrapper.classList.remove('swiper-wrapper');
+      slides.forEach(slide => {
+        slide.classList.remove('swiper-slide');
+      });
+    }
+  }
 
+  //On Load
+  window.addEventListener("load", function () {
+    swiperMode();
+  });
+
+  //On Resize
+  window.addEventListener("resize", function () {
+    swiperMode();
+  });
+
+//   Слайдер плейлистов
+  const playlistsSlider = new Swiper(".js-playlists-slider", {
+    // Настройки для мобильной версии, без брейкпоинта
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 30,
+    grid: {
+      rows: 6,
+      fill: "row"
+    },
+
+    // Пагинация цифрами
+    pagination: {
+      el: ".js-playlists-pagination",
+      type: "fraction"
+    },
+
+    // Кнопки пролистывания слайдера
+    navigation: {
+      prevEl: ".js-playlists-btn-prev",
+      nextEl: ".js-playlists-btn-next"
+    },
+
+    // Брейкпоинты планшет и десткоп
+    breakpoints: {
+      860: {
+        slidesPerGroup: 3,
+        slidesPerView: 3,
+        grid: {
+          rows: 4
+        }
+      },
+
+      1200: {
+        slidesPerGroup: 4,
+        slidesPerView: 4,
+        grid: {
+          rows: 3
+        }
+      }
+    }
+  });
+})();
