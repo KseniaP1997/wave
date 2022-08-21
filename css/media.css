@@ -68,7 +68,7 @@
     margin-right: 0;
   }
   .menu__item:not(:last-child) {
-    margin-right: 29px;
+    margin-right: 28px;
   }
   .menu__player {
     padding-left:10px;
@@ -179,7 +179,7 @@
   }
   /*header*/
   .menu__item:last-child {
-    margin-right: 32px;
+    margin-right: 37px;
   }
   .menu__limit {
     display: none;
