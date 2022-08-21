@@ -1744,6 +1744,9 @@
   .podcast__play:active {
     background-image: url(../img/Podcast/play_320.svg);
   }
+  .pause-play {
+    background-image: url(../img/Podcast/play_pause_320.svg);
+  }
   .podcast__svg {
     margin-right: 5px;
   }
