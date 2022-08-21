@@ -218,6 +218,11 @@ btn.addEventListener('click', () => {
 $('.control').on('click', function() {
     $(this).toggleClass('pause play');
 });
+//header
+$('.menu__player').on('click', function() {
+  $(this).toggleClass('menu__pause');
+});
+//podcast
 $('.podcast__play').on('click', function() {
   $(this).toggleClass('pause-play');
 });

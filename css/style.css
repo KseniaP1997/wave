@@ -79,7 +79,9 @@ label:active, label:focus {
 .nav__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .nav__link {
   font-weight: 400;
@@ -269,6 +271,9 @@ label:active, label:focus {
 .header__container-mob {
 border-color: #E6E8EC;
 }
+.container__logo {
+  margin-right: 80px;
+}
 .burger {
   position: relative;
   display: none;
@@ -277,6 +282,10 @@ border-color: #E6E8EC;
   width: 30px;
   height: 23px;
   background-color: transparent;
+}
+.burger:focus-visible {
+  color: #AA9DFA;
+  outline: none;
 }
 .burger__line {
   position: absolute;
@@ -300,6 +309,10 @@ border-color: #E6E8EC;
 .burger::after {
   top: auto;
   bottom: 0;
+}
+.menu__nav  {
+  max-width: 663px;
+  width: 100%;
 }
 .laptop {
   display: none;
@@ -639,6 +652,10 @@ border-color: #E6E8EC;
   display: flex;
   flex-wrap: nowrap;
 }
+
+.menu__item:not(:last-child) {
+  margin-right: 0;
+}
 .menu__item {
   margin-right: 52px;
 }
@@ -665,11 +682,30 @@ border-color: #E6E8EC;
 .menu__player {
   display: flex;
   align-items: center;
-  padding-left: 13px;
-  padding-right: 13px;
-  border-left: 1px solid #E6E8EC;
-  border-right: 1px solid #E6E8EC;
+  margin-left: 0;
+  margin-right: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/Header/menu__player_default.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
   cursor:pointer;
+  transition: background .5s ease-in-out;
+}
+@media screen and (any-hover: hover) {
+  .menu__player:hover {
+    background-image: url(../img/Header/menu__player_hover.svg);
+  }
+}
+.menu__player:focus-visible {
+  outline: none;
+  background-image: url(../img/Header/menu__player_focus.svg);
+}
+.menu__player:active {
+  background-image: url(../img/Header/menu__player_active.svg);
+}
+.menu__pause{
+  background-image: url(../img/Header/menu__player_pause.svg);
 }
 .menu__broadcast {
   display: none;
@@ -896,7 +932,6 @@ border-color: #E6E8EC;
   flex-wrap: nowrap;
   align-content: center;
   height: 100%;
-  max-height: 140px;
   width: 100%;
   background-color:  #fff;
 }
@@ -988,7 +1023,6 @@ border-color: #E6E8EC;
 .pause-play {
   background-image: url(../img/Podcast/play_pause.svg);
 }
-.card-body {}
 .podcast__option {
   display: flex;
   flex-wrap: nowrap;
