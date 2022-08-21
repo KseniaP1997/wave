@@ -262,6 +262,9 @@ img {
   background-color:#4F28A5;
   border-color: #4F28A5;
 }
+.header__container-mob {
+border-color: #E6E8EC;
+}
 .burger {
   position: relative;
   display: none;
@@ -1432,8 +1435,7 @@ img {
 
 .ui-accordion .ui-accordion-content {
   padding: 0;
-  padding-top: 25px;
-  padding-bottom: 17px;
+  margin: 0;
 }
 /*.ui-helper-reset {
   margin-bottom: 15px;
@@ -1443,9 +1445,7 @@ img {
   font-weight: 400;
   color: #333;
 }
-.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
-  font-family: "Muller", sans-serif;
-}
+
 .ui-accordion-header-active~ .guest__close svg {
   transform: rotate(-180deg);
 }
@@ -1557,20 +1557,37 @@ html .ui-button.ui-state-disabled:active {
   width: 730px;
   margin-right: 30px;
 }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+  font-family: sans-serif , "Muller";
+  font-size: 16px;
+  line-height: 16px;
+}
+.accordion-list__item-320 {
+  display: none;
+}
 .accordion-list__item {
   position: relative;
   min-height: 88px;
   margin-top: -1px;
   border-top: 1px solid #A1A6B4;
 }
-.tabs-nav {
+.tabs-nav__item-1024 {
+  display: none;
+}
+.tabs-nav__item-320 {
+  display: none;
+}
+.tabs-nav__flex-box {
+  width: 800px;
+}
+.tabs-nav__desktop {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
   width: 800px;
-  padding-top: 27px;
+  padding-top: 26px;
   padding-bottom: 20px;
 }
 .tabs-nav__item {
@@ -1580,7 +1597,7 @@ html .ui-button.ui-state-disabled:active {
   margin-right: 17px;
 }
 .tabs-nav__item:not(:nth-child(13n)) {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 .accordion-list__title {
   padding: 34px 50px 31px 0;
@@ -1670,6 +1687,9 @@ path {
 }
 .tabs-nav__btn:focus-visible {
   background-color: #AA9DFA;
+}
+.tabs-nav__btn:focus {
+  color: #6D31EE;
 }
 .tabs-nav__btn:active {
   color: #4F28A5;
@@ -2647,7 +2667,7 @@ path {
   padding-bottom: 25px;
   padding-right: 52px;
   padding-left: 52px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 fieldset {
   padding: 0;
