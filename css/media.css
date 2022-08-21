@@ -1430,6 +1430,7 @@
     padding-top: 9px;
     background-color: #E6E8EC;
   }
+  
   .header__mob {
     display: flex;
     justify-content:space-between;
@@ -1546,8 +1547,16 @@
     color: #fff;
     border: none;
   }
+  .header__menu {
+    position: relative;
+    justify-content: space-between;
+  }
   .burger {
-    left: 32px;
+    left: 0;
+  }
+  .header__buttons {
+    position: absolute;
+    right: 0;
   }
   .menu__container {
     justify-content: center;
