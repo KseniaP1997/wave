@@ -178,8 +178,11 @@
     padding-right: 100px;
   }
   /*header*/
+  .header__container-mob {
+    background-color: #E6E8EC;
+  }
   .menu__item:last-child {
-    margin-right: 0;
+    margin-right: 34px;
   }
   .menu__limit {
     display: none;
@@ -545,6 +548,9 @@
   .popup__line {
     margin-bottom: 30px;
   }
+  .nav__list {
+    max-width: 100%;
+  }
   /*radio*/
   .radio__broadcast {
     margin-right: 0;
@@ -663,7 +669,7 @@
     height: 100%;
   }
   .track__card-item {
-    width: 100%;
+    max-width: 100%;
   }
   .track__card svg {
     top: 25%;
@@ -1109,7 +1115,9 @@
     padding-bottom: 10px;
   }
 }
+@media (max-width:767px){
 
+}
 @media (max-width:720px){
   /*header*/
   .laptop {
@@ -1283,7 +1291,6 @@
     flex-wrap: nowrap;
     justify-content: center;
   }
-  
   .menu__btns {
     display: none;
   }
@@ -1514,8 +1521,8 @@
     width: 100%;
   }
   .container__large {
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 20px;
+    padding-bottom: 30px;
   }
   .header__access {
     display: none;
@@ -1553,10 +1560,12 @@
   }
   .burger {
     left: 0;
+    top: -6px;
   }
   .header__buttons {
     position: absolute;
     right: 0;
+    top: -6px;
   }
   .menu__container {
     justify-content: center;
