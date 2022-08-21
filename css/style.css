@@ -9,6 +9,7 @@ body {
   margin: 0;
 }
 a {
+  outline: none;
   text-decoration: none;
 }
 img {
@@ -2237,6 +2238,7 @@ path {
 .subscription__radio {
   display: flex;
   margin-right: 30px;
+  align-items: center;
 }
 .sensor {
   width: 636px;

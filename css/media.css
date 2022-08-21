@@ -688,6 +688,9 @@
     width: 540px;
     height: 474px;
   }
+  .subscription__inform-box {
+    max-width: 100%;
+  }
   .buy__container {
     max-width: 539px;
   }
@@ -1020,6 +1023,7 @@
     padding-top: 54px;
   }
   .subscription__radio {
+    flex-direction: column;
     max-width: 100%;
   }
   .subscription__inform-box {
@@ -1503,11 +1507,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 280px;
+    max-width: 215px;
   }
   .li-item {
-    margin-right: 30px;
+    margin-right: 0;
     margin-bottom: 30px;
+    width: 72px;
   }
   .li-item:nth-child(6n) {
     margin-bottom: 0;
