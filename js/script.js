@@ -104,20 +104,20 @@ menu.classList.remove('mobile--visible');
 });
 
 //play
-document.querySelector('.bottom-btns__btn-players-archive').addEventListener('click', function () {
-  document.querySelector('.bottom-btns__btn-players-archive .passive').classList.toggle('btn-active')
+document.querySelector('.menu-btns__btn-players-archive').addEventListener('click', function () {
+  document.querySelector('.menu-btns__btn-players-archive .passive').classList.toggle('btn-active')
 });
 
-document.querySelector('.bottom-btns__btn-players-ether').addEventListener('click', function () {
-  document.querySelector('.bottom-btns__btn-players-ether .passive').classList.toggle('btn-active')
+document.querySelector('.menu-btns__btn-players-ether').addEventListener('click', function () {
+  document.querySelector('.menu-btns__btn-players-ether .passive').classList.toggle('btn-active')
 });
 
-document.querySelector('.bottom-btns__btn-players-archive-mobile').addEventListener('click', function () {
-  document.querySelector('.bottom-btns__btn-players-archive-mobile .passive').classList.toggle('btn-active')
+document.querySelector('.card__btn-players-archive-mobile').addEventListener('click', function () {
+  document.querySelector('.card__btn-players-archive-mobile .passive').classList.toggle('btn-active')
 });
 
-document.querySelector('.bottom-btns__btn-players-ether-mobile').addEventListener('click', function () {
-  document.querySelector('.bottom-btns__btn-players-ether-mobile .passive').classList.toggle('btn-active')
+document.querySelector('.card__btn-players-ether-mobile').addEventListener('click', function () {
+  document.querySelector('.card__btn-players-ether-mobile .passive').classList.toggle('btn-active')
 });
 
 
