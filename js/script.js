@@ -103,9 +103,9 @@ document.body.style.overflow = 'initial';
 menu.classList.remove('mobile--visible');
 });
 
-//play
+//header menu__container
 document.querySelector('.menu-btns__btn-players-archive').addEventListener('click', function () {
-  document.querySelector('.menu-btns__btn-players-archive .passive').classList.toggle('btn-active')
+document.querySelector('.menu-btns__btn-players-archive .passive').classList.toggle('btn-active')
 });
 
 document.querySelector('.menu-btns__btn-players-ether').addEventListener('click', function () {
@@ -120,7 +120,28 @@ document.querySelector('.card__btn-players-ether-mobile').addEventListener('clic
   document.querySelector('.card__btn-players-ether-mobile .passive').classList.toggle('btn-active')
 });
 
+//podcasts play
+document.querySelector('.podcast__play-link').addEventListener('click', function () {
+  document.querySelector('.podcast__play-link .passive').classList.toggle('btn-active')
+});
 
+const podcast = document.querySelector('.podcast__play-link');
+
+podcast.addEventListener('click', () => {
+document.body.style.overflow = 'hidden';
+menu.classList.add('btn-active');
+});
+
+const button = document.querySelector('.header__access');
+const form = document.querySelector('#blablabla');
+const popup = document.querySelector('.popup');
+const closed = document.querySelector('.popup__close');
+
+button.addEventListener('click', () => {
+  form.classList.add('open');
+  popup.classList.add('popup_open');
+ 
+});
 
 //Валидация формы
 new JustValidate('.form', {
