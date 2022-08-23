@@ -1510,6 +1510,7 @@
     width: 100%;
     overflow-y: auto;
     z-index: 300;
+    display: block;
   }
   .laptop__picture {
     display: none;
