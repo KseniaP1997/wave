@@ -1510,7 +1510,23 @@ border-color: #E6E8EC;
   font-size: 20px;
   line-height: 20px;
   cursor: pointer;
-  transition: border-color .5s;
+  transition: border-color .5s ease-in-out;
+}
+.accordion-list__item {
+  transition: border-color .5s ease-in-out;
+}
+.accordion-list__title {
+  transition: border-color .5s ease-in-out;
+}
+
+.ui-accordion .ui-accordion-header:active{
+  border-color: #4F28A5;
+}
+.accordion-list__item:active {
+  border-color: #4F28A5;
+}
+.accordion-list__title:active {
+  border-color: #4F28A5;
 }
 .choices__list--dropdown .choices__item--selectable:after {
   -webkit-transition: -webkit-transform .5s ease-in-out;
@@ -1736,12 +1752,12 @@ path {
 .tabs-nav__btn:active {
   color: #4F28A5;
 }
-/*.tabs-nav__btn-default {
+.tabs-nav__btn-default {
   color: #AA9DFA;
 }
-.tabs-nav__btn:active {
-  color: #4F28A5;
-}*/
+.tabs-nav__btn-default-act {
+  color: #fff;;
+}
 .accordion-list__img {
   position: absolute;
   top: 20px;
