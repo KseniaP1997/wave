@@ -469,8 +469,6 @@
     left: 0;
     display: block;
   }
-  .form-search__btn-search {
-  }
   .header__buttons {
     position: absolute;
     right: 0;
@@ -686,7 +684,6 @@
     justify-content: flex-start;
   }
   .playlists__card {
-    flex-direction: column;
     height: 100%;
   }
   .playlists__card-item {
@@ -1138,10 +1135,12 @@
     padding-bottom: 10px;
   }
 }
-@media (max-width:767px){
 
-}
 @media (max-width:720px){
+  .container {
+    padding-left: 75px;
+    padding-right: 75px;
+}
   /*header*/
   .laptop {
     padding-left: 50px;
@@ -1234,7 +1233,6 @@
     width: 50%;
     padding-bottom: 5px;
   }*/
-  
   .btn-menu {
     z-index: 0;
     display: flex;
@@ -1247,35 +1245,28 @@
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
   }
-  
   .btn-menu svg {
     -webkit-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
   }
-  
   .btn-menu_active svg {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
-  
   .btn-menu .header__bottom {
     background-color:  rgba(230, 232, 236, 0.4);
   }
-  
   .btn-menu:focus-visible {
     color: #AA9DFA;
   }
-  
   .btn-menu:active {
     color: #4F28A5;
   }
-  
   .btn-menu:focus-visible svg circle {
     fill: #AA9DFA;
   }
-  
   .btn-menu:active svg circle {
     fill: #4F28A5;
   }
@@ -1359,19 +1350,19 @@
     min-width: 100%;
   }
   /*playlist*/
-  .playlists__card {
-    flex-direction: column;
-    max-height: 100%;
-  }
-  .playlists__card-item {
-    min-width: 100%;
-  }
   .playlists__card svg {
     left: 35%;
     top: 35%;
   }
   .genre__box {
     flex-direction: column;
+  }
+  .genre__radio {
+    margin-right: 0;
+    width: 350px;
+  }
+  .genre__radio:nth-child(4n) {
+    margin-bottom: 25px;
   }
   .playlists__description {
     justify-content: flex-start;
@@ -1501,10 +1492,6 @@
     align-items: center;
     padding: 0;
     height: 36px;
-  }
-  .laptop {
-    
-   
   }
   .nav__link {
     font-size: 20px;
@@ -2013,13 +2000,6 @@
     display: block;
     width: 90px;
   }
-  /*.accordion-list  {
-    display: flex;
-    flex-direction: column-reverse;
-  }*/
-  /*.accordion-list__item-mobile {
-    display: none;
-  }*/
   .ui-accordion .ui-accordion-content {
     padding-top: 19px;
     padding-bottom: 0;
@@ -2112,10 +2092,6 @@
   .genre__box {
     display: none;
   }
-  .playlists__card {
-    flex-direction: column;
-    max-height: 100%;
-  }
   .playlists__flag {
     right: 0;
     left: auto;
@@ -2123,7 +2099,6 @@
   .playlists__description {
     padding-top: 8px;
     padding-bottom: 6px;
-    min-width: 100%;
   }
   .playlists__title {
     margin-bottom: 2px;
@@ -2402,7 +2377,15 @@
   .form-search__input-search:focus-visible {
     width: 190px;
   }
-  
+  .playlists__card {
+    flex-direction: column;
+    max-height: 100%;
+  }
+  .playlists__description {
+    padding-top: 8px;
+    padding-bottom: 6px;
+    min-width: 100%;
+  }
 }
 
 @media (max-width:320px){
@@ -2428,5 +2411,15 @@
   }
   .tabs-nav__item {
     width: 90px;
+  }
+  /*plsylists*/
+  .playlists__card {
+    flex-direction: column;
+    max-height: 100%;
+  }
+  .playlists__description {
+    padding-top: 8px;
+    padding-bottom: 6px;
+    min-width: 100%;
   }
 }

@@ -2240,6 +2240,7 @@ path {
 }
 .playlists__btn {
   flex-shrink: 0;
+  background-color:transparent
 }
 .playlists__btn--prev {
   margin-right: 12px;
@@ -2248,6 +2249,10 @@ path {
   width: auto;
   flex-shrink: 0;
   margin-right: 12px;
+  font-style: 16px;
+  font-weight: 400;
+  font-style: italic;
+  color: #A1A6B4;
 }
 .playlists__slider {
   overflow: hidden;
