@@ -449,7 +449,8 @@
     margin-right: 30px;
   }
   .header__menu {
-    justify-content: right;
+    position: relative;
+    justify-content: space-between;
     align-items: center;
   }
   .header__item {
@@ -459,10 +460,20 @@
     margin-right: 0;
     margin-bottom: 30px;
   }
+  .container__large {
+    padding-top: 41px;
+    padding-bottom: 40px;
+  }
   .burger {
     position: absolute;
-    left: 100px;
+    left: 0;
     display: block;
+  }
+  .form-search__btn-search {
+  }
+  .header__buttons {
+    position: absolute;
+    right: 0;
   }
   .menu-btns {
     display: none;
@@ -780,7 +791,6 @@
   }
   /*header*/
   .burger {
-    left: 114px;
     width: 24px;
   }
   .menu__item:last-child {

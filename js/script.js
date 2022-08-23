@@ -120,9 +120,7 @@ document.querySelector('.card__btn-players-ether-mobile').addEventListener('clic
   document.querySelector('.card__btn-players-ether-mobile .passive').classList.toggle('btn-active')
 });
 
-document.querySelector('.tabs-nav__btn-default').addEventListener('click', function () {
-  document.querySelector('.tabs-nav__btn').classList.toggle('tabs-nav__btn-default-act')
-});
+
 
 //Валидация формы
 new JustValidate('.form', {
