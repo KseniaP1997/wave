@@ -1710,6 +1710,7 @@ path {
 .accordion-list__title:active~.accordion-list__img path {
   stroke: #fff;
 }
+
 .tabs-nav__btn {
   display: block;
   padding: 2px;
@@ -1735,6 +1736,12 @@ path {
 .tabs-nav__btn:active {
   color: #4F28A5;
 }
+/*.tabs-nav__btn-default {
+  color: #AA9DFA;
+}
+.tabs-nav__btn:active {
+  color: #4F28A5;
+}*/
 .accordion-list__img {
   position: absolute;
   top: 20px;

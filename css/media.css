@@ -1269,13 +1269,50 @@
   .btn-menu:active svg circle {
     fill: #4F28A5;
   }
-
+  .card__btn-players-mob {
+    height: 100%;
+    width: 160px;
+    background-color: #fff;
+  }
   .card__btns_active {
     display: flex;
+    position: absolute;
     z-index: 1;
     justify-content: center;
     padding-top: 9px;
     padding-bottom: 5px;
+    height: 73px;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+  }
+  .card__pusk {
+    top: 2px !important;
+    left: 34px !important;
+  }
+  .card__btn-players-mob svg {
+    top: 2px;
+    left: 55px;
+  }
+  .card__btn-players-archive-mobile::before {
+    top: 30px;
+    left: 32px;
+    font-size: 10px;
+  }
+  .card__btn-players-archive-mobile::after {
+    top: 44px;
+    left: 32px;
+    font-size: 14px;
+}
+  .card__btn-players-ether-mobile::before {
+    top: 30px;
+    left: 53px;
+    font-size: 10px;
+  }
+  .card__btn-players-ether-mobile::after {
+    top: 44px;
+    left: 54px;
+    font-size: 14px;
   }
   .btn-menu_active svg {
     -webkit-transform: rotate(-45deg);
