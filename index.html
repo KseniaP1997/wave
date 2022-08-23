@@ -200,54 +200,6 @@
           </div>
         </div>
       </div>
-      <div class="popup">
-        <div class="popup__container">
-          <div class="popup__wrapper">
-            <div id="blablabla">
-              <button class="btn-reset popup__close" aria-label="Закрыть"></button>
-              <h3 class="popup__title">Вход</h3>
-              <div class="popup__line">
-                <span class="popup__span">Если у вас ещё нет аккаунта, <a href="" class="popup__link">зарегестрируйтесь</a></span>
-              </div>
-              <div class="validation popup__validation">
-                <form class="popup__form" action="/requestFine" autocomplete="off" method="POST">
-                  <div class="validation__input ">
-                    <input maxlength="25" size="40" name="login" placeholder="Логин">
-                  </div>
-                  <div class="validation__input ">
-                    <input id="userPassword" type="password" placeholder="Пароль">
-                  </div>
-                </form>
-                <button type="submit" class="popup__btn btn-purple btn-reset">Войти</button>
-              </div>
-              <div class="popup__inform">
-                <div class="popup__line">
-                  <span class="popup__span">Войти с помощью:</span>
-                </div>
-                <div class="popup__social-box flex">
-                  <a href="" aria-label="facebook" class="popup__social fb">
-                    <svg width="34" height="34" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13.78 20V12.26H16.3722L16.76 9.25111H13.78V7.33111C13.78 6.46 14.0222 5.86556 15.2711 5.86556H16.8644V3.17444C16.0931 3.09261 15.3179 3.05292 14.5422 3.05556C12.2456 3.05556 10.6733 4.45778 10.6733 7.03333V9.25111H8.07556V12.26H10.6733V20H1.11111C0.816426 20 0.533811 19.8829 0.325437 19.6746C0.117063 19.4662 0 19.1836 0 18.8889V1.11111C0 0.816426 0.117063 0.533811 0.325437 0.325437C0.533811 0.117063 0.816426 0 1.11111 0H18.8889C19.1836 0 19.4662 0.117063 19.6746 0.325437C19.8829 0.533811 20 0.816426 20 1.11111V18.8889C20 19.1836 19.8829 19.4662 19.6746 19.6746C19.4662 19.8829 19.1836 20 18.8889 20H13.78Z" fill="#A1A6B4"/>
-                    </svg>              
-                  </a>
-                  <a href="" aria-label="vkontakte" class="popup__social vk">
-                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4"/>
-                      <path d="M17.7487 23.332H16.3854C16.3854 23.332 13.3772 23.5131 10.7277 20.7545C7.83835 17.7461 5.28686 11.7765 5.28686 11.7765C5.28686 11.7765 5.13973 11.3853 5.29964 11.1959C5.47938 10.9831 5.96857 10.9695 5.96857 10.9695L9.22782 10.9482C9.22782 10.9482 9.53491 10.9994 9.75468 11.1608C9.93588 11.294 10.0373 11.543 10.0373 11.543C10.0373 11.543 10.5641 12.8752 11.2617 14.0804C12.6233 16.4331 13.2575 16.9477 13.7198 16.6957C14.3934 16.3283 14.1914 13.3698 14.1914 13.3698C14.1914 13.3698 14.2037 12.296 13.8522 11.8177C13.58 11.4475 13.0667 11.3391 12.84 11.3089C12.6566 11.2844 12.9576 10.8587 13.3478 10.6676C13.9343 10.3803 14.9699 10.3641 16.1938 10.3765C17.1473 10.3863 17.4219 10.4458 17.7946 10.5357C18.6597 10.7446 18.6327 11.4138 18.5745 12.8578L18.5745 12.8579C18.5571 13.2893 18.537 13.7899 18.537 14.3681C18.537 14.4983 18.5332 14.6371 18.5293 14.7798V14.7799C18.509 15.5193 18.4858 16.3656 18.9726 16.6802C19.2223 16.8415 19.8331 16.7042 21.3603 14.111C22.084 12.8819 22.627 11.4368 22.627 11.4368C22.627 11.4368 22.7453 11.1791 22.9297 11.0688C23.1181 10.9561 23.3726 10.9907 23.3726 10.9907L26.8023 10.9695C26.8023 10.9695 27.8329 10.8466 27.9997 11.3118C28.1747 11.8001 27.6146 12.9402 26.2135 14.8077C24.8827 16.5813 24.236 17.2332 24.2968 17.8106C24.3401 18.2221 24.7429 18.5959 25.5137 19.311L25.5668 19.3603C27.2548 20.9272 27.7051 21.7501 27.8121 21.9456C27.8207 21.9615 27.8271 21.9732 27.8318 21.9809C28.5873 23.2337 26.9939 23.332 26.9939 23.332L23.9477 23.3746C23.9477 23.3746 23.2931 23.5041 22.4317 22.9125C21.9813 22.6033 21.5409 22.0985 21.1214 21.6174L21.1214 21.6174C20.4798 20.8818 19.8868 20.2019 19.3806 20.3624C18.5317 20.6319 18.5583 22.4613 18.5583 22.4613C18.5583 22.4613 18.5645 22.852 18.371 23.0601C18.1605 23.2866 17.7487 23.332 17.7487 23.332Z" fill="#121723"/>
-                    </svg>        
-                  </a>
-                  <a href="" aria-label="google" class=" popup__social gl">
-                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4"/>
-                      <path d="M20.9404 11.9923C20.1518 11.2694 18.7687 10.4043 16.7184 10.4043C13.8309 10.4043 11.3802 12.2649 10.4945 14.8364C10.2761 15.5001 10.1427 16.2111 10.1427 16.9459C10.1427 17.6806 10.2761 18.3917 10.5066 19.0553C11.3802 21.6269 13.8309 23.4874 16.7184 23.4874C18.3441 23.4874 19.5816 23.0489 20.5036 22.4208C21.9595 21.4254 22.6147 19.9441 22.7359 18.9605H16.7184V15.0024H26.9701C27.1278 15.666 27.2007 16.3059 27.2007 17.1829C27.2007 20.4299 26.0116 23.1675 23.9492 25.028C22.1414 26.6634 19.6665 27.6115 16.7184 27.6115C12.4478 27.6115 8.7596 25.2176 6.96405 21.7335C6.22401 20.2877 5.79938 18.6642 5.79938 16.9459C5.79938 15.2275 6.22401 13.604 6.96405 12.1582C8.7596 8.67409 12.4478 6.28027 16.7184 6.28027C19.6665 6.28027 22.1294 7.33499 24.022 9.05333L20.9404 11.9923Z" fill="#121723"/>
-                    </svg>          
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
   </header>
 
   <main>
@@ -948,471 +900,82 @@
                     Блогеры
                   </h3>
                   <div class="tabs-nav flex">
-                    <ul class="tabs-nav__desktop list-reset flex">
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                    <ul class="tabs-nav__desktop list-reset">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="denisov">
                           Сергей Денисов
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
                           Евгений Войновский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
                           Олег Свиридовский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="telman">
                           Денис Тельман
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
                           Матвей Мечников
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-default  tabs-nav__btn-active" data-path="martynova">
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn tabs-nav__btn--active" data-path="martynova">
                           Ольга Мартынова
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="cowpers">
                           Владислав Кауперс
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="gorin">
                           Юрий Горин
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="prusinov">
                           Константин Прусинов
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
                           Дмитрий Михалок
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
                           Михаил Пожитников
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
+                      <li class="tabs-nav__item">
+                        <button class="btn-reset tabs-nav__btn" data-path="sergeev">
                           Максим Сергеев
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
                           Иван Калитников
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
                           Пётр Пиотровский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="poluyan">
                           Георгий Полуян
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                  <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
-                    <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
-                  </svg>
-                </li>
-                <li class="accordion-list__item accordion-list__item-320">
-                  <h3 class="accordion-list__title list-reset" tabindex="0">
-                    Историки
-                  </h3>
-                  <div class="tabs-nav flex">
-                    <ul class="tabs-nav__desktop list-reset flex">
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li> 
                     </ul>
                   </div>
                   <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
@@ -1426,230 +989,80 @@
                     Арт-критики
                   </h3>
                   <div class="tabs-nav flex">
-                    <ul class="tabs-nav__desktop list-reset flex">
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                    <ul class="tabs-nav__desktop list-reset">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="denisov">
                           Сергей Денисов
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
                           Евгений Войновский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
                           Олег Свиридовский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="telman">
                           Денис Тельман
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
                           Матвей Мечников
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
                           Ольга Мартынова
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="cowpers">
                           Владислав Кауперс
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="gorin">
                           Юрий Горин
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="prusinov">
                           Константин Прусинов
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
                           Дмитрий Михалок
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
                           Михаил Пожитников
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="one">
                           Максим Сергеев
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
                           Иван Калитников
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
                           Пётр Пиотровский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="poluyan">
                           Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
                         </button>
                       </li>
                     </ul>
@@ -1665,235 +1078,34 @@
                     Художники
                   </h3>
                   <div class="tabs-nav flex">
-                    <ul class="tabs-nav__desktop list-reset flex">
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                    <ul class="tabs-nav__desktop list-reset">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="denisov">
                           Сергей Денисов
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
                           Евгений Войновский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
                           Олег Свиридовский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="telman">
                           Денис Тельман
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
                           Матвей Мечников
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      </ul>
+                    </ul>
                   </div>
-                  
                   <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2" />
@@ -1905,233 +1117,28 @@
                     Люди науки
                   </h3>
                   <div class="tabs-nav flex">
-                    <ul class="tabs-nav__desktop list-reset flex">
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                    <ul class="tabs-nav__desktop list-reset">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="denisov">
                           Сергей Денисов
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
                           Евгений Войновский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
                           Олег Свиридовский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="telman">
                           Денис Тельман
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      </ul>
+                    </ul>
                   </div>
                   <svg class="accordion-list__img" width="48" height="48" viewbox="0 0 48 48"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2144,230 +1151,20 @@
                     Историки
                   </h3>
                   <div class="tabs-nav flex">
-                    <ul class="tabs-nav__desktop list-reset flex">
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                    <ul class="tabs-nav__desktop list-reset">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="denisov">
                           Сергей Денисов
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
                           Евгений Войновский
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
                           Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
                         </button>
                       </li>
                     </ul>
@@ -2378,235 +1175,20 @@
                     <path d="M16 22L24 30L32 22" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
                   </svg>
                 </li>
-                <li class="accordion-list__item accordion-list__item-mobile">
+                <li class="accordion-list__item">
                   <h3 class="accordion-list__title list-reset" tabindex="0">
                     Филологи
                   </h3>
                   <div class="tabs-nav flex">
-                    <ul class="tabs-nav__desktop list-reset flex">
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                    <ul class="tabs-nav__desktop list-reset">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="denisov">
                           Сергей Денисов
                         </button>
                       </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
+                      <li class="tabs-nav__item">
                         <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
                           Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1920">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-1024">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="denisov">
-                          Сергей Денисов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="voynovsky">
-                          Евгений Войновский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mechnikov">
-                          Матвей Мечников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn tabs-nav__btn-active" data-path="martynova">
-                          Ольга Мартынова
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="prusinov">
-                          Константин Прусинов
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="mikhalok">
-                          Дмитрий Михалок
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="kalitnikov">
-                          Иван Калитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="piotrovsky">
-                          Пётр Пиотровский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="telman">
-                          Денис Тельман
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="gorin">
-                          Юрий Горин
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="sviridovsky">
-                          Олег Свиридовский
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="cowpers">
-                          Владислав Кауперс
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="pozhitnikov">
-                          Михаил Пожитников
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="poluyan">
-                          Георгий Полуян
-                        </button>
-                      </li>
-                      <li class="tabs-nav__item tabs-nav__item-320">
-                        <button class="btn-reset tabs-nav__btn" data-path="one">
-                          Максим Сергеев
                         </button>
                       </li>
                     </ul>
@@ -4160,6 +2742,55 @@
       <div class="container">
         <div class="wave__writing ">
           <p class="wave__text ">W-WAVE ® 2021 </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup">
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div id="blablabla">
+            <button class="btn-reset popup__close" aria-label="Закрыть"></button>
+            <h2 class="popup__title">Вход</h2>
+            <div class="popup__line">
+              <span class="popup__span">Если у вас ещё нет аккаунта, <a href="" class="popup__link">зарегестрируйтесь</a></span>
+            </div>
+            <div class="validation popup__validation">
+              <form class="popup__form" action="/requestFine" autocomplete="off" method="POST">
+                <div class="validation__input ">
+                  <input maxlength="25" size="40" name="login" placeholder="Логин">
+                </div>
+                <div class="validation__input ">
+                  <input id="userPassword" type="password" placeholder="Пароль">
+                </div>
+              </form>
+              <button type="submit" class="popup__btn btn-purple btn-reset">Войти</button>
+            </div>
+            <div class="popup__inform">
+              <div class="popup__line">
+                <span class="popup__span">Войти с помощью:</span>
+              </div>
+              <div class="popup__social-box flex">
+                <a href="" aria-label="facebook" class="popup__social fb">
+                  <svg width="34" height="34" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.78 20V12.26H16.3722L16.76 9.25111H13.78V7.33111C13.78 6.46 14.0222 5.86556 15.2711 5.86556H16.8644V3.17444C16.0931 3.09261 15.3179 3.05292 14.5422 3.05556C12.2456 3.05556 10.6733 4.45778 10.6733 7.03333V9.25111H8.07556V12.26H10.6733V20H1.11111C0.816426 20 0.533811 19.8829 0.325437 19.6746C0.117063 19.4662 0 19.1836 0 18.8889V1.11111C0 0.816426 0.117063 0.533811 0.325437 0.325437C0.533811 0.117063 0.816426 0 1.11111 0H18.8889C19.1836 0 19.4662 0.117063 19.6746 0.325437C19.8829 0.533811 20 0.816426 20 1.11111V18.8889C20 19.1836 19.8829 19.4662 19.6746 19.6746C19.4662 19.8829 19.1836 20 18.8889 20H13.78Z" fill="#A1A6B4"/>
+                  </svg>              
+                </a>
+                <a href="" aria-label="vkontakte" class="popup__social vk">
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4"/>
+                    <path d="M17.7487 23.332H16.3854C16.3854 23.332 13.3772 23.5131 10.7277 20.7545C7.83835 17.7461 5.28686 11.7765 5.28686 11.7765C5.28686 11.7765 5.13973 11.3853 5.29964 11.1959C5.47938 10.9831 5.96857 10.9695 5.96857 10.9695L9.22782 10.9482C9.22782 10.9482 9.53491 10.9994 9.75468 11.1608C9.93588 11.294 10.0373 11.543 10.0373 11.543C10.0373 11.543 10.5641 12.8752 11.2617 14.0804C12.6233 16.4331 13.2575 16.9477 13.7198 16.6957C14.3934 16.3283 14.1914 13.3698 14.1914 13.3698C14.1914 13.3698 14.2037 12.296 13.8522 11.8177C13.58 11.4475 13.0667 11.3391 12.84 11.3089C12.6566 11.2844 12.9576 10.8587 13.3478 10.6676C13.9343 10.3803 14.9699 10.3641 16.1938 10.3765C17.1473 10.3863 17.4219 10.4458 17.7946 10.5357C18.6597 10.7446 18.6327 11.4138 18.5745 12.8578L18.5745 12.8579C18.5571 13.2893 18.537 13.7899 18.537 14.3681C18.537 14.4983 18.5332 14.6371 18.5293 14.7798V14.7799C18.509 15.5193 18.4858 16.3656 18.9726 16.6802C19.2223 16.8415 19.8331 16.7042 21.3603 14.111C22.084 12.8819 22.627 11.4368 22.627 11.4368C22.627 11.4368 22.7453 11.1791 22.9297 11.0688C23.1181 10.9561 23.3726 10.9907 23.3726 10.9907L26.8023 10.9695C26.8023 10.9695 27.8329 10.8466 27.9997 11.3118C28.1747 11.8001 27.6146 12.9402 26.2135 14.8077C24.8827 16.5813 24.236 17.2332 24.2968 17.8106C24.3401 18.2221 24.7429 18.5959 25.5137 19.311L25.5668 19.3603C27.2548 20.9272 27.7051 21.7501 27.8121 21.9456C27.8207 21.9615 27.8271 21.9732 27.8318 21.9809C28.5873 23.2337 26.9939 23.332 26.9939 23.332L23.9477 23.3746C23.9477 23.3746 23.2931 23.5041 22.4317 22.9125C21.9813 22.6033 21.5409 22.0985 21.1214 21.6174L21.1214 21.6174C20.4798 20.8818 19.8868 20.2019 19.3806 20.3624C18.5317 20.6319 18.5583 22.4613 18.5583 22.4613C18.5583 22.4613 18.5645 22.852 18.371 23.0601C18.1605 23.2866 17.7487 23.332 17.7487 23.332Z" fill="#121723"/>
+                  </svg>        
+                </a>
+                <a href="" aria-label="google" class=" popup__social gl">
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="33.33" height="33.33" rx="2" fill="#A1A6B4"/>
+                    <path d="M20.9404 11.9923C20.1518 11.2694 18.7687 10.4043 16.7184 10.4043C13.8309 10.4043 11.3802 12.2649 10.4945 14.8364C10.2761 15.5001 10.1427 16.2111 10.1427 16.9459C10.1427 17.6806 10.2761 18.3917 10.5066 19.0553C11.3802 21.6269 13.8309 23.4874 16.7184 23.4874C18.3441 23.4874 19.5816 23.0489 20.5036 22.4208C21.9595 21.4254 22.6147 19.9441 22.7359 18.9605H16.7184V15.0024H26.9701C27.1278 15.666 27.2007 16.3059 27.2007 17.1829C27.2007 20.4299 26.0116 23.1675 23.9492 25.028C22.1414 26.6634 19.6665 27.6115 16.7184 27.6115C12.4478 27.6115 8.7596 25.2176 6.96405 21.7335C6.22401 20.2877 5.79938 18.6642 5.79938 16.9459C5.79938 15.2275 6.22401 13.604 6.96405 12.1582C8.7596 8.67409 12.4478 6.28027 16.7184 6.28027C19.6665 6.28027 22.1294 7.33499 24.022 9.05333L20.9404 11.9923Z" fill="#121723"/>
+                  </svg>          
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
