@@ -28,6 +28,9 @@
   .tabs-content__bloggers {
     width: 254px;
   }
+  .wave__img {
+    height: 11px;
+  }
 }
 
 @media (max-width:1250px){
