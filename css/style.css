@@ -2177,7 +2177,7 @@ path {
 .playlist__img {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .playlists {
   width: calc(730 / 1110 * 100%);

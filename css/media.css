@@ -316,7 +316,6 @@
   }
   .playlists__card {
     flex-direction: row;
-    height: 112px;
   }
   .genre__radio>span {
     height: 30px;
