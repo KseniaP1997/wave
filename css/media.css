@@ -2364,8 +2364,6 @@
 
 @media (max-width:400px) {
   .broadcast__item {
-    max-height: 149px;
-    height: 100%;
     width: 44.4%;
   }
   .broadcast__a::after {
