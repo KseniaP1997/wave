@@ -910,6 +910,11 @@ border-color: #E6E8EC;
   background-repeat: no-repeat;
 }
 /*podcast*/
+
+
+
+
+
 .podcast {
   background-color:  #E6E8EC;
 }
@@ -1003,24 +1008,26 @@ border-color: #E6E8EC;
   line-height: 16px; 
   color: #A1A6B4;
 }
-.podcast__play-link::before {
-  content: '';
+.podcast__play-link {
+  width: 48px;
+  height: 48px;
+}
+.podcast__pause-link {
+  display: none;
 }
 .podcast_play-defoult {
-  background-color: transparent;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
   outline: none;
+  background-color: transparent;
   -webkit-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-.podcast_play-defoult:not(:last-child) {
-  border-left: 0;
-  border-right: 1px solid #E6E8EC;
-}
+
 .podcast_play-defoult svg {
-  position:absolute;
-  top: 10px;
-  right: 33px;
+  
 }
 .podcast_play-defoult svg path {
   -webkit-transition: all .5s ease-in-out;

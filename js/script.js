@@ -121,26 +121,15 @@ document.querySelector('.card__btn-players-ether-mobile').addEventListener('clic
 });
 
 //podcasts play
-document.querySelector('.podcast__play-link').addEventListener('click', function () {
-  document.querySelector('.podcast__play-link .passive').classList.toggle('btn-active')
-});
+//document.querySelector('.podcast__play-link').addEventListener('click', function () {
+  //document.querySelector('.podcast__play-link .passive').classList.toggle('btn-active')
+//});
 
-const podcast = document.querySelector('.podcast__play-link');
 
-podcast.addEventListener('click', () => {
-document.body.style.overflow = 'hidden';
-menu.classList.add('btn-active');
-});
 
-const button = document.querySelector('.header__access');
-const form = document.querySelector('#blablabla');
-const popup = document.querySelector('.popup');
-const closed = document.querySelector('.popup__close');
-
-button.addEventListener('click', () => {
-  form.classList.add('open');
-  popup.classList.add('popup_open');
- 
+// toggle button class on click
+$('button').on('click', function() {
+  $('.podcast__play-link, .podcast__pause-link').toggle();
 });
 
 //Валидация формы
