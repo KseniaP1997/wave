@@ -49,22 +49,9 @@
     width: 112px;
     height: 14px;
   }
-  .container__large {
-    display: block;
-  }
   .container__logo {
     display: none;
   }
-  .header__item:last-child {
-    margin-right: 0;
-  }
-  .menu__item:not(:last-child) {
-    margin-right: 0;
-  }
-  .menu__item {
-    margin-right: 34px;
-  }
-  
   .menu__limit {
     display: none;
   }
@@ -168,9 +155,6 @@
     padding-right: 100px;
   }
   /*header*/
-  .menu__item:last-child {
-    margin-right: 34px;
-  }
   .menu__limit {
     display: none;
   }
@@ -433,6 +417,7 @@
     margin-bottom: 30px;
   }
   .container__large {
+    display: block;
     padding-top: 41px;
     padding-bottom: 40px;
   }
@@ -475,7 +460,6 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-  
   .popup__container {
     max-width: 750px;
   }
@@ -517,7 +501,6 @@
   .mobile__menu {
     display: flex;
     flex-wrap: wrap;
-    
     width: 100%;
   }
   .mobile__list {
@@ -545,9 +528,6 @@
   .laptop__picture {
     display: none;
   }
-  
-  /*550*/
-  /*header*/
   .header__container-mob {
     padding-bottom: 9px;
     padding-top: 9px;
@@ -559,9 +539,6 @@
     align-items: center;
     padding: 0;
     height: 36px;
-  }
-  .nav__link {
-    font-size: 20px;
   }
   .laptop {
     padding: 0;
@@ -619,15 +596,6 @@
     z-index:6;
     margin: 0;
   }
- 
-  
-  
-
-
-
-
-
-
   /*radio*/
   .radio__broadcast {
     margin-right: 0;
@@ -736,6 +704,8 @@
   .playlists__card svg {
     top: 25%;
     left: 30%;
+    width: 40px;
+    height: 40px;
   }
   /*subcription*/
   .subscription__box {
@@ -1170,7 +1140,7 @@
   .container {
     padding-left: 75px;
     padding-right: 75px;
-}
+  }
   /*header*/
   .laptop__close {
     left: 50px;
@@ -1341,6 +1311,9 @@
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+  .form-search__input-search:focus-visible {  
+    width: 150px;
+  }
   /*radio*/
   .radio__title {
     height: 40px;
@@ -1372,11 +1345,13 @@
   }
   .tabs-nav__desktop {
     column-count: 2;
-}
+  }
   /*playlist*/
   .playlists__card svg {
     left: 35%;
     top: 35%;
+    width: 30px;
+    height: 30px;
   }
   .genre__box {
     flex-direction: column;
@@ -1468,6 +1443,10 @@
   /*broadcast*/
   .broadcast__a::after {
     height: 134px;
+  }
+  .broadcast__a::before {
+    width: 110%;
+    height: 108%;
   }
 }
 
@@ -1583,11 +1562,9 @@
   .laptop__close {
     margin: 0;
   }
-  
   .mobile__item:nth-child(5) {
     margin-bottom: 0;
   }
-  
   .li-list {
     display: flex;
     flex-wrap: wrap;
@@ -2105,6 +2082,9 @@
     padding-top: 8px;
     padding-bottom: 6px;
   }
+  .playlists__card-item {
+    max-width: 100%;
+  }
   .playlists__title {
     margin-bottom: 2px;
     font-size: 12px;
@@ -2142,10 +2122,6 @@
   }
   .playlists__slider-nav {
     margin-bottom: 0;
-  }
-  .playlists__card svg {
-    left: 25%;
-    top: 25%;
   }
   .inform-dop__paragraph {
     margin-bottom: 12px;
@@ -2382,18 +2358,9 @@
   .form-search__input-search:focus-visible {
     width: 190px;
   }
-  .playlists__card {
-    flex-direction: column;
-    max-height: 100%;
-  }
-  .playlists__description {
-    padding-top: 8px;
-    padding-bottom: 6px;
-    min-width: 100%;
-  }
 }
 
-@media (max-width:320px){
+@media (max-width:400px) {
   .broadcast__item {
     max-height: 149px;
     height: 100%;
@@ -2405,13 +2372,9 @@
   .tabs-nav {
     padding: 0;
   }
-  .tabs-nav__item:nth-child(even) {
-    margin-right: 22px;
-  }
   .tabs-nav__item {
     width: 90px;
   }
-  /*plsylists*/
   .playlists__card {
     flex-direction: column;
     max-height: 100%;

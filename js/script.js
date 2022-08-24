@@ -57,7 +57,6 @@ document.querySelector('.btn-menu').addEventListener('click', function () {
   document.querySelector('.btn-menu').classList.toggle('btn-menu_active')
   document.querySelector('.header__bottom').classList.toggle('header__bottom_active')
 });
- 
 
 // tabs
 document.querySelectorAll('.guest-box__step' ).forEach(function(tabsBtn){
@@ -73,7 +72,6 @@ document.querySelectorAll('.guest-box__step' ).forEach(function(tabsBtn){
     document.querySelector(`[data-target="${path}"]`).classList.add('guest__description--active');
   });
 });
-
 
 //Кастомный селект
 const element = document.querySelector('#selectCustom');
@@ -97,7 +95,6 @@ document.body.style.overflow = 'initial';
 menu.classList.remove('laptop--visible');
 });
 
-
 close.addEventListener('click', () => {
 document.body.style.overflow = 'initial';
 menu.classList.remove('mobile--visible');
@@ -119,13 +116,6 @@ document.querySelector('.card__btn-players-archive-mobile').addEventListener('cl
 document.querySelector('.card__btn-players-ether-mobile').addEventListener('click', function () {
   document.querySelector('.card__btn-players-ether-mobile .passive').classList.toggle('btn-active')
 });
-
-//podcasts play
-//document.querySelector('.podcast__play-link').addEventListener('click', function () {
-  //document.querySelector('.podcast__play-link .passive').classList.toggle('btn-active')
-//});
-
-
 
 // toggle button class on click
 $('button').on('click', function() {
